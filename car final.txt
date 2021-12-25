@@ -1,0 +1,244 @@
+#include <iostream>
+
+using namespace std;
+
+
+class car
+{
+    int age ,mobileno,payment,id,speed ,model,password;
+    char name[30];
+    char add[50];
+    char gender[5];
+    char color[10];
+      public :
+          void start()
+          {
+              cout<<"\t\t\t*****************SIMPLE CAR MANEGMENT SYSTEM*******************";
+              cout<<"\n\n\n\t\tENTER YOUR PASSWORD:-";
+              cin>>password;
+              if(password==1234)
+                display();
+              else 
+                 exit();
+          }
+          void exit()
+          {
+              cout<<" ______________YOUR ENTERED THE PASSWORD IS  WRONG ___________________";
+              
+          }
+          void display()
+          {
+              cout <<"--------------------ACESS GRANTED WELCOME TO THE OUR THE SYSTEM ----------------------------";
+              int option ;
+              do{
+                  
+                  display2();
+                
+              cout<<"\n\n\nEnter the any option  -";
+              cin>>option;
+              switch(option)
+              {
+                  case 1: 
+               
+                  func();
+                  mydata();
+                 hondadata();
+                 display1();
+                  case 2: cout<<"NO";
+                  exit();
+              }
+              }while(option);
+          }
+          void menu()
+          {
+              cout<<"\n\n\n************************SIMPLE CAR RENTAL SYSTEM *************************";
+              cout<<"\n\n\nWELCOME TO OUR COMPANY CHOSE ONE OPTION:-----";
+              cout<<"\n\n\nENTER 1 -TO SELEcT HONDA:-";
+              cout<<"\n\n\nENTER 2-TO SELECT BMW:-";
+              cout<<"\n\n\nENTER 3-TO SELECT ODDI :-";
+              cout<<"\n\n\nENTER 4-TO SELECT SWIFT:-";
+              cout<<"\n\n\nENTER 5- TO SELET LAMBORGINI:-";
+              cout<<"\n\n\nENTER 6-TO SELECT TESLA:-";
+              cout<<"\n\n\nENTER 7-TO SELECT ROYALS cAR:-";
+              cout<<"\n\n\nEXIT :--";
+          }
+          void func()
+          {
+         int option1;
+         do{
+              menu();
+         cout<<"\n\n\nENTER THE YOUR CHOICE--->";
+         cin>>option1;
+         switch(option1)
+         {
+             case 1:cout<<"\n\n\nTHANKS FOR ENTER THE NO -1:-";
+             honda();
+             hondadata();
+             display1();
+             case 2: cout<<"\n\n\nTHANKS FOR ENTER NO 2:-";
+                bmw();
+                hondadata();
+                 display1();
+            case 3:cout<<"\n\n\nTHANKS FOR ENTER NO 3:-" ;
+                  oddi();
+                   hondadata();
+                    display1();
+            case 4: cout<<"\n\n\nTHANKS FOR ENTER NO 4:-" ;
+                 swift();
+                  hondadata();
+                   display1();
+            case 5:  cout<<"\n\n\nTHANKS FOR ENTER NO 5:-";
+                lamborgini();
+                  hondadata();
+                   display1();
+            case 6:  cout<<"\n\n\nTHANKS FOR ENTER NO 6:-";
+                tesla();
+                hondadata();
+                 display1();
+            case 7: cout<<"\n\n\nTHANKS FOR ENTER NO 7:-";
+                royalsroy();
+                  hondadata();
+             display1();
+             case 8: "EXIT-->";
+             exit1();
+             
+         }
+         }while(option1);
+    }
+         void honda()
+         {
+            cout<<"\n\n\n  MODEL :: 1990";
+            cout<<"\n\n\n COLOR :: RED";
+            cout<<"\n\n\n MAXIMUM SPEED :: 120 KM/H";
+            cout<<"\n\n\n PRICE :: 200,000";
+         }
+         void bmw()
+         {
+            cout<<"\n\n\n  MODEL :: 1985";
+            cout<<"\n\n\n COLOR :: black";
+            cout<<"\n\n\n MAXIMUM SPEED :: 140 KM/H";
+            cout<<"\n\n\n PRICE :: 500,000";
+             
+         }
+         void oddi()
+         {
+             
+            cout<<"\n\n\n MODEL :: 1965";
+            cout<<"\n\n\nCOLOR :: greay";
+            cout<<"\n\n\nMAXIMUM SPEED :: 160 KM/H";
+            cout<<"\n\n\nPRICE :: 600,000";
+             
+         }
+         void swift()
+         {
+              
+            cout<<"\n\n\n  MODEL :: 1965";
+            cout<<"\n\n\n COLOR :: blue";
+            cout<<"\n\n\n MAXIMUM SPEED :: 160 KM/H";
+            cout<<"\n\n\n PRICE :: 100,000";
+             
+         }
+         void lamborgini()
+         {
+             cout<<"\n\n\n  MODEL :: 1945";
+            cout<<"\n\n\nCOLOR :: red";
+            cout<<"\n\n\nMAXIMUM SPEED :: 160 KM/H";
+            cout<<"\n\n\nPRICE :: 1000,000";
+             
+         }
+         void tesla()
+         {
+             
+             cout<<"\n\n\nt  MODEL :: 1945";
+            cout<<"\n\n\n COLOR :: choolety";
+            cout<<"\n\n\n MAXIMUM SPEED :: 160 KM/H";
+            cout<<"\n\n\n PRICE :: 1500,000";
+            
+         }
+         void royalsroy()
+         {
+             cout<<"\n\n\n******** ALL THE INFORMATION *****";
+              cout<<"\n\n\n MODEL :: 1945";
+            cout<< "\n\n\n COlor:: white";
+            cout<<"\n\n\n MAXIMUM SPEED :: 160 KM/H";
+            cout<<"\n\n\n PRICE :: 3000,000";
+            cout<<"\n\n\n ********ALL INFORMATION ARE STORED*********";
+         }
+         void hondadata()
+         {
+        int option2;
+        do{
+            mydata();
+        cout<<"\n\n\nARE YOU WANT TO SHURE THENIF YOU WANT TO RENT THE CAR THEN CHOSE OPTION (YES /NO)";
+        cin>>option2;
+        switch(option2)
+        {
+            case 1: "THANK FOR CHOSE YES :---";
+            personal();
+            display1();
+            case 2: "EXIT";
+            exit1();
+        }
+        
+    }while(option2);
+ }            
+      void personal()
+      {
+          cout<<"\n\n\n*********************************************************";
+          cout<<"\n\n\nPLEASE PROVIDE YOUR PERSONAL DETAILS -->";
+          cout<<"\n\n\n**********************************************************";
+          cout<<"\n\n\nENTER YOUR NAME :-";
+          cout<<"------->";
+          cin>>name;
+          cout<<"\n\n\n ENTER YOUR NATIONAL ID:-";
+          cout<<"-------->";
+          cin>>id;
+          cout<<"\n\n\n ENTER YOUR ADDRESS :-";
+          cout<<"-------->";
+          cin>>add;
+          cout<<"\n\n\nENTER YOUR PAYMENT:--";
+          cout<<"------>";
+          cin>>payment ;
+          cout<<"\n\n\n ENTER YOUR AGE :--";
+          cout<<"------->";
+          cin>>age;
+          cout<<"-----------------YOUR DETAILS ARE SUCCESFULY ARE CRREATED ------------------------";
+          
+          }
+         void display1()
+         {
+             cout<<"\n\n\n ------------YOUR ALL DETAILS-----------";
+             cout<<"\n\n\nYOUR NAME IS:-"<<name;
+             cout<<"\n\n\n YOR NATIONAL ID IS:-"<<id;
+             cout<<"\n\n\n YOU ADDRESS IS:-"<<add;
+             cout<<"\n\n\n YOUR PAYMENT IS:---"<<payment;
+             cout<<"\n\n\n**********THIS IS YOUR REQUIRED INFORMATION _-----------";
+             
+         }
+    void exit1()
+    {
+        start();
+    }
+    void display2()
+    {
+        cout<<"\n\n\n 1.continue-->";
+        cout<<"\n\n\n 2.EXIT--->";
+    }
+ void mydata()
+{
+    cout<<"\n\n\n 1. CREATE DATA:--";
+    cout<<"\n\n\n 2. DISPLAY DATA:-->";
+}
+
+
+
+
+};
+int main()
+{
+    car s1;
+    s1.start();
+    s1.func();
+}
+
+
